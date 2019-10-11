@@ -73,6 +73,5 @@ gulp.task('server', function() {
 });
 
 
-
 gulp.task('inject', gulp.parallel('css-inject', 'watch-inject', 'server'));
 gulp.task('default', gulp.parallel('css-inject', 'watch-inject', 'server'));
