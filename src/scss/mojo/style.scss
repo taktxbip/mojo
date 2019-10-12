@@ -1,12 +1,34 @@
+// <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap);
+
+// font-family: 'Source Sans';
+
+
+
+.order-summary .product-item .a-left {
+	display: flex;
+	flex-direction: column;
+		align-items: center;
+		.product-item-detail a {
+			text-align: center;
+			margin-top: 0;
+			display: inline-block;
+			background: none;
+			strong {
+				line-height: 1 !important;
+				font-size: 12px !important;
+			}
+		}
+}
+
 #maincontent h1 {
   margin-bottom: 10px;
 }
 
-.catalog-category-view #maincontent .page-title-wrapper{text-align: center;}
-#maincontent .category-view .category-description {
-	margin-bottom: 60px;
-	text-align: center;
-}
+.catalog-category-view #maincontent .page-title-wrapper {text-align: center;}
+
+
 
 
 body.category-stacks .review-form tbody tr:first-child {
@@ -985,26 +1007,45 @@ body .fotorama__stage .wp-product-label-bottom-left {
 }
 
 
-
 .store-view-default .breadcrumbs {
 	position: relative;
 }
 
-.store-view-default .breadcrumbs .items {
+.breadcrumbs .items {
 	max-width: 1400px !important;
 	display: block; 
 	margin: 0 auto;
 }
 
+//Category Description
 .catalog-category-view .page-title .base {
 	font-size: 35px;
 	line-height: 42px;
 	color: #3d4246;
-	font-weight: 400;
+	font-weight: 600;
 	display: inline-block;
-	margin-top: 60px; 
+	margin: 10px 0 10px 0; 
+}
+
+.catalog-category-view .page-title {
+	line-height: 35px; 
+	margin-bottom: -10px !important; 
+}
+
+#maincontent .category-view .category-description {
+	font: 300 normal 20px / 30px "Source Sans Pro", sans-serif;
+	color: #000;
+	margin-bottom: 0px;
+	text-align: center;
+	p {
+		font-weight: 300;
+	}
 }
 
 .paypal-button.paypal-button-number-0.paypal-button-layout-horizontal.paypal-button-shape-rect.paypal-button-branding-branded.paypal-button-number-single.paypal-button-env-production.paypal-should-focus.paypal-button-label-paypal.paypal-button-color-gold.paypal-button-logo-color-blue {
 	background: aqua;
+}
+
+.cms-home-page-v11 .feature-title {
+	line-height: 1.2;
 }

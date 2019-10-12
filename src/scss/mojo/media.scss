@@ -1,10 +1,17 @@
-@media screen and (min-width: 768px) {
-  .page-wrapper .page-footer .footer.content .footer-v1-content .border-v1 {
+@media (min-width: 768px) {
+
+	.checkout-index-index .one-step-checkout-wrapper {
+		margin-top: 0;
+	}
+
+	.checkout-index-index .osc-cms-block { 
+		margin: 0;
+	}
+
+	.page-wrapper .page-footer .footer.content .footer-v1-content .border-v1 {
     margin-top: 0;
   }
-}
 
-@media (min-width: 768px) {
   .theme-pearl .product.data.items > .item.title.active .switch {
     height: 30px !important;
   }
@@ -42,6 +49,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+	.opc-estimated-wrapper .minicart-wrapper {
+		float: right;
+	}
+
   .header-placeholder {
     height: 140px;
   }
@@ -203,12 +215,15 @@
     background: #fff;
   }
 
-  body .page-main .checkout-container a.button-action,
-  .popup-authentication button.action,
-  .popup-gift-message-item button.action,
-  body .page-main .checkout-container button:not(.primary):not(.action-show):not(.action-close):not(.edit-address-link):not(.ui-datepicker-trigger) {
-    background-color: #fff !important;
-  }
+  // body .page-main .checkout-container a.button-action,
+  // .popup-authentication button.action,
+  // .popup-gift-message-item button.action,
+  // body .page-main .checkout-container button:not(.primary):not(.action-show):not(.action-close):not(.edit-address-link):not(.ui-datepicker-trigger) {
+  //   background-color: #fff !important;
+  // }
+
+
+
 
   .opc-estimated-wrapper .minicart-wrapper button.action.showcart:before {
     color: #f70619;
@@ -245,9 +260,7 @@
     float: left;
   }
 
-  .opc-estimated-wrapper .minicart-wrapper {
-    float: right;
-  }
+
 
   .nav-sections-item-title a.nav-sections-item-switch,
   .theme-pearl.store-view-us h1 {
@@ -371,10 +384,32 @@
 }
 
 @media screen and (max-width: 568px) {
-  .wp-product-label span {
-    font-size: 1rem;
-    padding: 3px 5px !important;
+
+
+	.opc-estimated-wrapper .minicart-wrapper {
+		clear: both;
+		width: 100%;
+		text-align: center;
+		transform: translate(10px, 0);
   }
+
+	.opc-estimated-wrapper {
+		padding-bottom: 0;
+	}
+
+	.opc-wrapper .form-discount {
+		max-width: 100%;
+	}
+
+  .wp-product-label span {
+		font-size: 1rem;
+    padding: 3px 5px !important;
+	}
+
+	#multistore-mobile-switcher-language {
+		padding-top: 2px;
+		min-height: 29px; 
+	}
 
   .wp-product-label-top-right span {
     width: 60%;
