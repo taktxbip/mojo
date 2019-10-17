@@ -58,12 +58,12 @@ gulp.task("watch", function() {
 //build
 gulp.task("build", function() {
 	return gulp.src('./app/*.css')
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_au/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_ca/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_eu/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_nz/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_us/web//css'));
+	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom/web//css'))
+	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_au/web//css'))
+	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_ca/web//css'))
+	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_eu/web//css'))
+	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_nz/web//css'))
+	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_us/web//css'));
 });
 
 
