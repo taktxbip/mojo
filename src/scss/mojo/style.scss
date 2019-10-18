@@ -1198,10 +1198,8 @@ body .fotorama__stage .wp-product-label-bottom-left {
   padding: 15px 7px;
   line-height: 16px;
   text-transform: none !important;
-  font-size: 13px !important;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+	font-size: 13px !important;
+	margin: 0 5px 10px;
   text-align: center;
 }
 .quickcart-bottom-container .alert-info strong {
@@ -1386,4 +1384,26 @@ body.checkout-cart-index
 }
 .order-summary .opc-block-summary .checkout-appalied-cart-list {
   display: none !important;
+}
+
+
+.header .quickcart-wrapper .block-quickcart .block-content-quickcart .quickcart-items-wrapper .quickcart-items .quickcart-product-item span.qty-update {
+	font-size: 26px;
+	line-height: 14px;
+}
+
+.alert.alert-success .icon-gift,
+.alert.alert-info .icon-hand-up {
+	font-size: 24px;
+	display: inline-block;
+	margin-right: 15px;
+}
+
+
+.alert.alert-success {
+	text-align: center;
+}
+
+.quickcart-bottom-container .alert-success {
+	margin: 0 5px 10px;
 }

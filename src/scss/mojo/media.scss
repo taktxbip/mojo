@@ -408,6 +408,11 @@
 }
 
 @media screen and (max-width: 568px) {
+
+	.wp-product-label.wp-product-label-top-right {
+		left: 50px;
+	}
+
   .opc-estimated-wrapper .minicart-wrapper {
     clear: both;
     width: 100%;
