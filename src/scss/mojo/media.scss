@@ -408,10 +408,9 @@
 }
 
 @media screen and (max-width: 568px) {
-
-	.wp-product-label.wp-product-label-top-right {
-		left: 50px;
-	}
+  .wp-product-label.wp-product-label-top-right {
+    left: calc(100% - 200px);
+  }
 
   .opc-estimated-wrapper .minicart-wrapper {
     clear: both;
@@ -766,8 +765,29 @@
 }
 
 @media screen and (max-width: 768px) {
+  .product-faqs .toggle.toggle-bg {
+    margin: 0 0 2px 0;
+  }
+  .product-faqs .toggle.toggle-bg .togglet i,
+  .product-faqs .toggle.toggle-bg .toggleta i {
+    left: 0;
+  }
+  .product-faqs .toggle.toggle-bg .togglet,
+  .product-faqs .toggle.toggle-bg .togglec,
+  .product-faqs .toggle.toggle-bg .toggleta {
+		text-align: left;
+		text-indent: -16px;
+	}
+	.product-faqs .toggle.toggle-bg .togglec {
+		text-indent: 0;
+	}
+
   .page-wrapper .page-header .panel.header .header.links {
     display: block !important;
+  }
+  .product-faqs .toggle.toggle-bg .togglet,
+  .product-faqs .toggle.toggle-bg .toggleta {
+    padding: 0 36px 10px;
   }
   .page-wrapper .page-header .panel.header ul.header.links li.greet.welcome {
     display: none !important;
@@ -898,16 +918,5 @@
     .wpx-sub
     .visible-xs {
     display: inline !important;
-  }
-  .product-faqs .toggle.toggle-bg .togglet i,
-  .product-faqs .toggle.toggle-bg .toggleta i {
-    line-height: 1.3;
-  }
-  .product-faqs .toggle.toggle-bg .togglet,
-  .product-faqs .toggle.toggle-bg .toggleta {
-    padding: 10px;
-  }
-  .product-faqs .toggle.toggle-bg {
-    margin: 0 0 5px 0;
   }
 }
