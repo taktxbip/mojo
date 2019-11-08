@@ -38,8 +38,13 @@
 @media screen and (max-width: 1400px) {
   .instagram-container {
     padding: 0;
-  }
+	}
+	.header-global-promo-wrapper {
+		width: calc(100% - 380px);
+	}
 }
+
+
 
 @media screen and (max-width: 1090px) {
   .offer-text {
@@ -51,6 +56,11 @@
   .opc-estimated-wrapper .minicart-wrapper {
     float: right;
   }
+
+	.header-global-promo-wrapper {
+		width: 100%;
+		left: 0;
+	}
 
   .header-placeholder {
     height: 140px;
@@ -408,9 +418,13 @@
 }
 
 @media screen and (max-width: 568px) {
-  .wp-product-label.wp-product-label-top-right {
-    left: calc(100% - 200px);
+  .product-page-v1 .wp-product-label.wp-product-label-top-right {
+		left: calc(100% - 100px);
   }
+
+	.page-products .product-item .p-product-label-top-right {
+		left: calc(100% - 100px);
+	}
 
   .opc-estimated-wrapper .minicart-wrapper {
     clear: both;
@@ -765,6 +779,9 @@
 }
 
 @media screen and (max-width: 768px) {
+	.header-global-promo-wrapper {
+		top: 38px;
+	}
   .product-faqs .toggle.toggle-bg {
     margin: 0 0 2px 0;
   }
@@ -856,10 +873,13 @@
     .switcher-options
     .select-region {
     display: none;
-  }
-  .header-global-promo-wrapper {
-    left: 0;
-  }
+	}
+	.header-global-promo-wrapper {
+		width: calc(100% - 180px);
+		transform: translateX(0);
+		left: 0;
+		right: 0;
+	}
   .header-global-promo-wrapper
     .header-global-promo
     #slides
@@ -872,13 +892,7 @@
   .product-faqs .toggle.toggle-bg .toggleta {
     line-height: 1.3;
     font-size: 13px;
-  }
-}
-
-@media (max-width: 420px) {
-  .header-global-promo-wrapper {
-    top: 38px;
-  }
+	}
   .header-multistore .offer-text {
     top: 2px;
     left: auto;
@@ -918,5 +932,11 @@
     .wpx-sub
     .visible-xs {
     display: inline !important;
-  }
+	}
+}
+
+@media (max-width: 420px) {
+	.header-global-promo-wrapper {
+		width: calc(100% - 70px);
+	}
 }
