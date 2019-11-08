@@ -1,7 +1,7 @@
 "use strict";
 
 var siteCSS =
-    '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/c2c4e9f2006e09fdab7ae1ad5f01aceb.min.css" />',
+    '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />',
   siteUrl = "https://mojohealth.net/";
 
 var gulp = require("gulp"),
@@ -81,7 +81,7 @@ gulp.task("server", function() {
       {
         match: new RegExp(siteCSS),
         fn: function() {
-					return '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/c2c4e9f2006e09fdab7ae1ad5f01aceb.min.css" /><link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/style.css" />';
+					return '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" /><link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/style.css" />';
         }
       }
     ]

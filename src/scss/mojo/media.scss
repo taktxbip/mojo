@@ -418,13 +418,25 @@
 }
 
 @media screen and (max-width: 568px) {
-  .product-page-v1 .wp-product-label.wp-product-label-top-right {
-		left: calc(100% - 100px);
-  }
 
-	.page-products .product-item .p-product-label-top-right {
-		left: calc(100% - 100px);
+
+  .product-page-v1 .wp-product-label.wp-product-label-top-right {
+		left: calc(100% - 95px);
+		span {
+			line-height: 1;
+		}
 	}
+	
+	.page-products .product-item .wp-product-label-top-right {
+		left: calc(100% - 90px) !important;
+		span {
+			line-height: 1;
+		}
+	}
+
+	// body * {
+	// 	color: red !important
+	// }
 
   .opc-estimated-wrapper .minicart-wrapper {
     clear: both;
