@@ -1,20 +1,20 @@
 "use strict";
 
 var siteCSS =
-    '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />',
+  '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />',
   siteUrl = "https://mojohealth.net/";
 
 var gulp = require("gulp"),
   rename = require("gulp-rename"),
   notify = require("gulp-notify"),
   prefix = require("gulp-autoprefixer"),
-  sass = require("gulp-sass"),
+  sass = require("gulp-dart-sass"),
   plumber = require("gulp-plumber"),
   browserSync = require("browser-sync"),
   cssnano = require("gulp-cssnano");
 
 //css inject
-gulp.task("css-inject", function() {
+gulp.task("css-inject", function () {
   var config = {
     addSourceMaps: true,
     concatCSS: true,
@@ -29,7 +29,7 @@ gulp.task("css-inject", function() {
       .pipe(
         plumber({
           // plumber - плагин для отловли ошибок.
-          errorHandler: notify.onError(function(err) {
+          errorHandler: notify.onError(function (err) {
             // nofity - представление ошибок в удобном для вас виде.
             return {
               title: "Styles",
@@ -50,38 +50,41 @@ gulp.task("css-inject", function() {
 });
 
 //watch
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   gulp.watch("src/scss/**/*.*", gulp.series("css"));
   gulp.watch("app/*.html", gulp.series("html"));
 });
 
 //build
-gulp.task("build", function() {
-	return gulp.src('./app/*.css')
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_au/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_ca/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_eu/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_nz/web//css'))
-	.pipe(gulp.dest('D:/Clouds/Mega/Freelance/Active/node_modules/MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_us/web//css'));
+gulp.task("build", function () {
+  return gulp.src('./app/*.css')
+    .pipe(gulp.dest('MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom/web//css'))
+    .pipe(gulp.dest('MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_au/web//css'))
+    .pipe(gulp.dest('MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_ca/web//css'))
+    .pipe(gulp.dest('MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_eu/web//css'))
+    .pipe(gulp.dest('MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_nz/web//css'))
+    .pipe(gulp.dest('MOJO_PRODUCTION/app/design/frontend/Pearl/weltpixel_custom_us/web//css'));
 });
 
 
 //watch-inject
-gulp.task("watch-inject", function() {
+gulp.task("watch-inject", function () {
   gulp.watch("src/scss/**/*.*", gulp.series("css-inject"));
 });
 
 //server
-gulp.task("server", function() {
+gulp.task("server", function () {
   browserSync({
     proxy: siteUrl,
     middleware: require("serve-static")("./app"),
     rewriteRules: [
       {
         match: new RegExp(siteCSS),
-        fn: function() {
-					return '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" /><link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/style.css" />';
+        fn: function () {
+          return `
+          <link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />
+          <link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/style.css" />
+          `;
         }
       }
     ]
