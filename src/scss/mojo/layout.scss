@@ -1,0 +1,61 @@
+.mojo-detox,
+.mojo-recharge {
+  padding: 40px 0;
+}
+
+.mojo-recharge+.mojo-detox,
+.mojo-detox+.mojo-recharge {
+  padding-top: 0;
+}
+
+.mojo-detox {
+  .module-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 50px;
+
+    @media screen and (max-width:568px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+}
+
+.mojo-recharge {
+  .module-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 50px;
+
+    @media screen and (max-width:568px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .home-left-right-media {
+        order: -1;
+      }
+    }
+  }
+}
+
+.home-left-right-text {
+  width: 100% !important;
+}
+
+.home-left-right-media {
+  width: 100% !important;
+
+  @media screen and (max-width:568px) {
+    margin: 0 auto;
+    width: 40% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container-v11 .margin-bottom-section-mob {
+    margin-bottom: 0;
+  }
+}
+

@@ -1,17 +1,20 @@
 "use strict";
 
-var siteCSS =
-  '<link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />',
-  siteUrl = "https://mojohealth.net/";
+const siteCSS = 'weltpixel_custom/en_GB/css/style.css" />';
+const rmScript = '/weltpixel_custom/en_GB/css/style.css">';
+// const siteUrl = "https://www.mojohealth.net/";
+// siteCSS = '</body>';
+// const siteUrl = "https://wholesale.mojohealth.net/";
+const siteUrl = "https://www.mojohealth.net/";
 
-var gulp = require("gulp"),
-  rename = require("gulp-rename"),
-  notify = require("gulp-notify"),
-  prefix = require("gulp-autoprefixer"),
-  sass = require("gulp-dart-sass"),
-  plumber = require("gulp-plumber"),
-  browserSync = require("browser-sync"),
-  cssnano = require("gulp-cssnano");
+const gulp = require("gulp");
+const rename = require("gulp-rename");
+const notify = require("gulp-notify");
+const prefix = require("gulp-autoprefixer");
+const sass = require("gulp-dart-sass");
+const plumber = require("gulp-plumber");
+const browserSync = require("browser-sync");
+const cssnano = require("gulp-cssnano");
 
 //css inject
 gulp.task("css-inject", function () {
@@ -28,9 +31,7 @@ gulp.task("css-inject", function () {
       .src("src/scss/common.scss")
       .pipe(
         plumber({
-          // plumber - плагин для отловли ошибок.
           errorHandler: notify.onError(function (err) {
-            // nofity - представление ошибок в удобном для вас виде.
             return {
               title: "Styles",
               message: err.message
@@ -42,7 +43,6 @@ gulp.task("css-inject", function () {
       .pipe(sass()) //Компиляция sass.
       .pipe(prefix("last 2 versions", "> 1%", "ie 9"))
       .pipe(rename("style.css"))
-      // .pipe(sourcemaps.write())
       .pipe(cssnano())
       .pipe(gulp.dest("app//"))
       .pipe(reload({ stream: true }))
@@ -81,10 +81,18 @@ gulp.task("server", function () {
       {
         match: new RegExp(siteCSS),
         fn: function () {
-          return `
-          <link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />
-          <link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/style.css" />
-          `;
+          // return ("</body><link rel='stylesheet' id='inserted' href='" + siteUrl + "style.css'>");
+          return ("\" /><link rel='stylesheet' id='inserted' href='" + siteUrl + "style.css'>");
+          // return `
+          // <link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/pub/static/version1573119902/_cache/merged/feaaf5962c812f448bbf12af1d0fad85.min.css" />
+          // <link rel="stylesheet" type="text/css" media="all" href="https://mojohealth.net/style.css" />
+          // `;
+        }
+      },
+      {
+        match: new RegExp(rmScript),
+        fn: function () {
+          return ("\" />");
         }
       }
     ]

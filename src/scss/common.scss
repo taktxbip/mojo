@@ -1,2 +1,12 @@
+@import "DEFAULT_style.scss";
+// @import "WHOLESALE_style.scss";
 @import "mojo/style.scss";
+@import "mojo/header.scss";
+@import "mojo/layout.scss";
+@import "mojo/single.scss";
+@import "mojo/cart.scss";
 @import "mojo/media.scss";
+
+p:empty {
+  display: none;
+}
