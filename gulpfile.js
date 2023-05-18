@@ -3,7 +3,7 @@
 const siteCSS = 'weltpixel_custom/en_GB/css/style.css" />';
 const rmScript = '/weltpixel_custom/en_GB/css/style.css">';
 // const siteUrl = "https://www.mojohealth.net/";
-// siteCSS = '</body>';
+// const siteCSS = '</body>';
 // const siteUrl = "https://wholesale.mojohealth.net/";
 const siteUrl = "https://www.mojohealth.net/";
 
